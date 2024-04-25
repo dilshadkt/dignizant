@@ -31,7 +31,6 @@ const AuthForm = () => {
       navigate("/admin");
       dispatch(setTokekn(result?.data?.token));
       // dispatch(setAuthentication(true));
-      console.log("object");
     } else {
       setError(result?.response?.data?.message);
     }

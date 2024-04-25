@@ -28,9 +28,10 @@ const AuthForm = () => {
       dispatch(setTokekn(result?.data?.token));
       dispatch(setAuthentication(true));
     } else if (result?.status === 203) {
-      navigate("/");
+      navigate("/admin");
       dispatch(setTokekn(result?.data?.token));
-      dispatch(setAuthentication(true));
+      // dispatch(setAuthentication(true));
+      console.log("object");
     } else {
       setError(result?.response?.data?.message);
     }

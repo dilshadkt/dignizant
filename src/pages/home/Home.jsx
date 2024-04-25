@@ -15,6 +15,7 @@ const Home = () => {
     isAuthenticated &&
       Axios.get("user/me").then((res) => dispatch(setUser(res.data)));
   }, [dispatch, isAuthenticated]);
+
   return <LandPage />;
 };
 

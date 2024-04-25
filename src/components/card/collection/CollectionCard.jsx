@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CollectionCard = ({ productData }) => {
+const CollectionCard = ({ productData, type = "user" }) => {
   return (
     <div>
       <Link
-        to={`/products/${productData._id}`}
+        to={type === "user" ? `/products/${productData._id}` : `#`}
         className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
       >
         <img

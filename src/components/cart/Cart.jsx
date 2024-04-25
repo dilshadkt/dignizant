@@ -6,7 +6,10 @@ import { useSelector } from "react-redux";
 import { nanoid } from "nanoid";
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.cart);
-  const subTotal = cartItems?.reduce((acc, curr) => acc + curr.price, 0);
+  const subTotal = cartItems?.reduce(
+    (acc, curr) => acc + Number(curr.price),
+    0
+  );
   const shipping = (subTotal * 5) / 100;
   return (
     <Drawer width={400} id="CartDrawer">

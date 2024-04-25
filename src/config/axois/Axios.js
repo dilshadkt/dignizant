@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://dignizant-api.onrender.com/api  ",
+  baseURL: "https://dignizant-api.onrender.com/api/",
   // baseURL: "http://localhost:8080/api/",
 });
 
